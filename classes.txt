@@ -1,0 +1,7 @@
+Carton
+Comida Organica
+Metal
+Papel
+Plastico
+Textiles
+Vidrio

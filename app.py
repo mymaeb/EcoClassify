@@ -1,8 +1,14 @@
+import os
+os.environ["TF_NUM_INTRAOP_THREADS"] = "1"
+os.environ["TF_NUM_INTEROP_THREADS"] = "1"
+os.environ["OMP_NUM_THREADS"] = "1"
+os.environ["TF_CPP_MIN_LOG_LEVEL"] = "3"
+
 from flask import Flask, request, jsonify, render_template_string
 from tensorflow.keras.models import load_model
 from tensorflow.keras.preprocessing import image
 from tensorflow.keras.applications.efficientnet import preprocess_input
-import numpy as np, os, tempfile
+import numpy as np, tempfile
 
 app = Flask(__name__)
 model = load_model('modelo_basura_alta_precision.keras')

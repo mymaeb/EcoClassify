@@ -25,7 +25,7 @@ opt_einsum==3.4.0
 optree==0.20.0
 packaging==26.3
 pillow==13.0.0
-protobuf==7.36.2
+protobuf==5.29.5
 Pygments==2.21.0
 requests==2.34.2
 rich==15.0.0

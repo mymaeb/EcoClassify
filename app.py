@@ -413,7 +413,8 @@ def clasificar():
     try:
         img = image.load_img(ruta, target_size=(224, 224))
         x = np.expand_dims(preprocess_input(image.img_to_array(img)), axis=0)
-        pred = model.predict(x, verbose=0)[0]
+        
+        pred = model(x, training=False).numpy()[0]
     finally:
         os.remove(ruta)
 
